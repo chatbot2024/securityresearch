@@ -115,7 +115,7 @@
         <span class="close-button" onclick="closeChatbox()">X</span>
     </div>
     <div id="input-container">
-        <input type="text" id="message" placeholder="Ask me a question..">
+        <input type="text" id="message" placeholder="Ask me price of any stock">
         <button id="send">Send</button>
     </div>
 
@@ -163,7 +163,8 @@
                     appendMessage('StockBot: ' + data, false);
                 })
                 .catch(error => {
-                    console.error('Error:', error);
+                    console.error('Error:', error)
+                    appendMessage(error)
                     appendMessage('StockBot: Sorry, something went wrong.', false);
                 });
 
